@@ -38,10 +38,10 @@ For a mini-batch $X$, each hidden layer computes
 
 $$
 Z^{(l)} = A^{(l-1)}W^{(l)} + b^{(l)}, \qquad
-A^{(l)} = \operatorname{ReLU}(Z^{(l)}),
+A^{(l)} = \mathrm{ReLU}(Z^{(l)}),
 $$
 
-where $A^{(0)} = X$ and $\operatorname{ReLU}(z) = \max(0,z)$. The final layer produces logits $Z^{(L)}$ and class probabilities via softmax:
+where $A^{(0)} = X$ and $\mathrm{ReLU}(z) = \max(0,z)$. The final layer produces logits $Z^{(L)}$ and class probabilities via softmax:
 
 $$
 P(y=k\mid x) = \frac{\exp(z_k-\max_j z_j)}{\sum_{r=1}^{10}\exp(z_r-\max_j z_j)}.
