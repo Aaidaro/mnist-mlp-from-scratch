@@ -1,0 +1,50 @@
+seed: 42
+data:
+  mnist_path: data/dataset/mnist.pkl.gz
+model:
+  input_dim: 784
+  output_dim: 10
+  hidden_dims:
+  - 16
+train:
+  epochs: 50
+  batch_size: 32
+  learning_rate: 0.001
+  optimizer: sgd
+  momentum_beta: 0.9
+  l2_lambda: 0.0
+  early_stopping_patience: 5
+  early_stopping_min_delta: 0.0001
+preprocessing:
+  normalization: none
+init:
+  mean: 0.0
+  std: 1.0
+  bias: 0.0
+search_space:
+  learning_rate:
+  - 1.0e-05
+  - 0.001
+  - 0.01
+  - 1.0
+  normalization:
+  - none
+  - standardize
+  batch_size:
+  - 8
+  - 16
+  - 32
+  - 128
+  optimizer:
+  - sgd
+  - momentum
+  l2_lambda:
+  - 0.0
+  - 0.0001
+  - 0.001
+  hidden_dims:
+  - - 8
+  - - 16
+  - - 64
+  - - 16
+    - 32
